@@ -1,5 +1,6 @@
 %define		pkgname	diff
 %define		php_min_version 5.3.3
+%include	/usr/lib/rpm/macros.php
 Summary:	Diff implementation for PHP
 Name:		php-sebastian-%{pkgname}
 Version:	1.1.0
@@ -9,7 +10,11 @@ Group:		Development/Libraries
 Source0:	https://github.com/sebastianbergmann/diff/archive/%{version}/%{name}-%{version}.tar.gz
 # Source0-md5:	61b8db69978590e046d31586dff73997
 URL:		https://github.com/sebastianbergmann/diff
+BuildRequires:	rpm-php-pearprov >= 4.4.2-11
+BuildRequires:	rpmbuild(macros) >= 1.553
 Requires:	php(core) >= %{php_min_version}
+Requires:	php(pcre)
+Requires:	php(spl)
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
