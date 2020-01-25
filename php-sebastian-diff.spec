@@ -1,6 +1,5 @@
 %define		pkgname	diff
 %define		php_min_version 5.3.3
-%include	/usr/lib/rpm/macros.php
 Summary:	Diff implementation for PHP
 Name:		php-sebastian-%{pkgname}
 Version:	1.1.0
